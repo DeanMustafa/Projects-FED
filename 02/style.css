@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  ---White: hsl(0, 0%, 100%);
+  ---Light-pink: hsl(275, 100%, 97%);
+  ---Grayish-purple: hsl(292, 16%, 49%);
+  ---Dark-purple: hsl(292, 42%, 14%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer {
+  text-align: center;
+  margin-top: 2em;
+  color: var(---Dark-purple);
+}
+footer a {
+  color: var(---Dark-purple);
+  font-weight: 600;
+}
+footer a:hover {
+  color: var(---Grayish-purple);
+}
+
+/** JS stuff for showing and hiding icons */
+.faqIcon {
+  display: none;
+  width: 30px;
+}
+.showIcon {
+  display: unset;
+}
+.subtext {
+  display: none;
+}
+.showText {
+  display: unset;
+}
+
+/** BACKGROUND */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.backgroundTop {
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 30vh;
+}
+.backgroundBottom {
+  background-color: var(---Light-pink);
+  width: 100%;
+  height: 70vh;
+}
+
+/** MOBILE */
+.container {
+  width: 90%;
+  padding: 1.5em;
+  border-radius: 0.6em;
+  background-color: var(---White);
+}
+
+.title {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 1.5em;
+}
+.title img {
+  width: 25px;
+}
+.title h1 {
+  color: var(---Dark-purple);
+}
+
+.faq {
+  font-weight: 700;
+  color: var(---Dark-purple);
+}
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(---Grayish-purple);
+  margin-bottom: 1.5em;
+}
+.text {
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text p {
+  font-size: 1.1em;
+}
+.text p:hover {
+  cursor: pointer;
+  color: var(---Grayish-purple);
+}
+.text img {
+  margin-left: 2em;
+}
+.subtext {
+  color: var(---Grayish-purple);
+  font-size: 0.9em;
+  line-height: 1.4em;
+  font-weight: 500;
+  padding-bottom: 1.5em;
+}
+
+/** RESPONSIVE */
+@media screen and (min-width: 425px) {
+  .backgroundTop {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+  }
+
+  .container {
+    max-width: 600px;
+  }
+}
