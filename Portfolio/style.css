@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  ---clr-light: #e7e7e7;
+  ---clr-dark: #0d0d0d;
+
+  ---blue-default: #1a71d3;
+  ---blue-light: #62a4f5;
+  ---blue-dark: #1558a8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.page-container {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+}
+.title {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 80px;
+}
+
+/** ANIMATION ANIMATION ANIMATION */
+/** ANIMATION ANIMATION ANIMATION */
+/** ANIMATION ANIMATION ANIMATION */
+/** ANIMATION ANIMATION ANIMATION */
+/** ANIMATION ANIMATION ANIMATION */
+@keyframes interactiveAnim {
+  from {
+    transform: rotate(360deg);
+    scale: 1.2;
+  }
+
+  to {
+    transform: rotate(0);
+    scale: 1;
+  }
+}
+.rotate-icon {
+  animation: interactiveAnim 0.5s ease;
+}
+
+/** JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+/** JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+/** JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+/** JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+/** JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+.hidden {
+  display: none;
+}
+
+.invisible {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(100%);
+  transition: all 1s;
+}
+.invisible-reverse {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.invisible-fade{
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 1.5s;
+}
+.pop-up {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+.project-wrapper:nth-child(2) {
+  transition-delay: 200ms;
+}
+.project-wrapper:nth-child(3) {
+  transition-delay: 400ms;
+}
+.project-wrapper:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.show-preview {
+  opacity: 1;
+  transform: translateX(0vh);
+}
+.hide-preview {
+  opacity: 0;
+  transform: translateX(500vh);
+}
+
+.bg-dark {
+  background-color: var(---clr-dark);
+}
+.bg-light {
+  background-color: var(---clr-light);
+}
+
+.text-dark {
+  color: var(---clr-dark);
+}
+.text-light {
+  color: var(---clr-light);
+}
+
+.btn-dark {
+  color: var(---clr-dark);
+  background-color: var(---clr-light);
+  box-shadow: 0px 2px 5px 1px rgba(231, 231, 231, 0.5);
+}
+.btn-light {
+  color: var(---clr-light);
+  background-color: var(---blue-default);
+  box-shadow: 0px 2px 5px 1px rgba(13, 13, 13, 0.5);
+}
+
+.dark-clr-break-line {
+  border-bottom: 2px solid var(---clr-dark);
+}
+.light-clr-break-line {
+  border-bottom: 2px solid var(---clr-light);
+}
+
+.input-dark {
+  color: var(---clr-dark);
+  border: 1px solid var(---clr-dark);
+}
+.input-dark::placeholder {
+  color: var(---clr-dark);
+}
+.input-light {
+  color: var(---clr-light);
+  border: 1px solid var(---clr-light);
+}
+.input-light::placeholder {
+  color: var(---clr-light);
+  letter-spacing: 2px;
+}
+
+.dark-email-page {
+  border-color: var(---clr-light);
+  box-shadow: 5px 5px 10px 5px rgba(13, 13, 13, 0.5);
+}
+.light-email-page {
+  color: var(---clr-dark);
+  border-color: var(---clr-dark);
+  background-color: var(---clr-light);
+  box-shadow: 5px 5px 10px 5px rgba(231, 231, 231, 0.5);
+}
+
+.submit-dark {
+  background-color: var(---clr-dark);
+}
+.submit-light {
+  background-color: var(---clr-light);
+}
+
+/** HERO HERO HERO */
+/** HERO HERO HERO */
+/** HERO HERO HERO */
+/** HERO HERO HERO */
+/** HERO HERO HERO */
+.hero {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+}
+
+.user-profile {
+  position: relative;
+}
+.user-profile .mode-toggle {
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  z-index: 2;
+}
+.icon-sun,
+.icon-moon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+}
+.user-avatar {
+  width: 320px;
+  border-radius: 50%;
+  border: 2px solid var(---clr-dark);
+}
+
+.user-info {
+  width: 33.33%;
+  text-align: center;
+}
+.user-info * {
+  margin-bottom: 15px;
+}
+.links * {
+  margin-bottom: 0;
+}
+.user-info h1,
+h3 {
+  text-transform: uppercase;
+}
+.user-info h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+.user-info h3 {
+  font-size: 28px;
+}
+.user-info p {
+  font-size: 20px;
+}
+
+.links {
+  gap: 25px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  cursor: pointer;
+}
+.links * {
+  width: 35px;
+}
+.links *:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 14px 22px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  border-radius: 20px;
+}
+.btn-light:hover {
+  background-color: var(---blue-light);
+}
+.btn-dark:hover {
+  opacity: 0.7;
+}
+.btn-light:active {
+  transform: translateY(5px);
+  background-color: var(---blue-dark);
+  box-shadow: inset 0px 5px 5px rgba(13, 13, 13, 0.5);
+}
+.btn-dark:active {
+  transform: translateY(2px);
+  opacity: 0.2;
+}
+
+/** PROJECT PROJECT PROJECT */
+/** PROJECT PROJECT PROJECT */
+/** PROJECT PROJECT PROJECT */
+/** PROJECT PROJECT PROJECT */
+/** PROJECT PROJECT PROJECT */
+
+.projects {
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.projects-container {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.project-wrapper * {
+  margin-bottom: 5px;
+}
+.project-wrapper img {
+  transition: all 0.3s ease-in-out;
+  max-width: 300px;
+  min-width: 250px;
+  min-height: 350px;
+  border-radius: 15px;
+  border: 1px solid brown;
+}
+.project-wrapper p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 600;
+}
+.project-wrapper p:nth-child(3) {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+/** SKILLS SKILLS SKILLS */
+/** SKILLS SKILLS SKILLS */
+/** SKILLS SKILLS SKILLS */
+/** SKILLS SKILLS SKILLS */
+/** SKILLS SKILLS SKILLS */
+
+.skills {
+  width: 100%;
+  max-width: 1600px;
+  min-height: 70vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.skills-container {
+  max-width: 600px;
+  min-height: 300px;
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skills-context {
+  display: flex;
+  margin-bottom: 20px;
+}
+.skills-context p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.checked-icon {
+  width: 20px;
+  margin-left: 20px;
+  margin-right: 3px;
+}
+
+.skills-line-break {
+  width: 250px;
+  margin-bottom: 20px;
+}
+.skills-line-break.secondary-line-break {
+  width: 280px;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+/** CONTACT CONTACT CONTACT */
+/** CONTACT CONTACT CONTACT */
+/** CONTACT CONTACT CONTACT */
+/** CONTACT CONTACT CONTACT */
+/** CONTACT CONTACT CONTACT */
+
+.contact {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.contact-container {
+  max-width: 800px;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: transparent;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.input:nth-child(3) {
+  font-size: 16px;
+  max-width: 100%;
+  min-width: 350px;
+  max-height: 700px;
+  min-height: 200px;
+}
+
+/** SUBMIT SUBMIT SUBMIT */
+/** SUBMIT SUBMIT SUBMIT */
+/** SUBMIT SUBMIT SUBMIT */
+/** SUBMIT SUBMIT SUBMIT */
+/** SUBMIT SUBMIT SUBMIT */
+.submit-preview {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.email-page {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 25px;
+  border: 2px solid;
+  padding: 50px;
+  text-align: left;
+}
+.name-view {
+  margin-bottom: 20px;
+}
+.email-view {
+  color: var(---blue-default);
+  margin-bottom: 20px;
+}
+
+.send {
+  margin-top: 50px;
+}
+
+/** LAPTOP LAPTOP LAPTOP */
+/** LAPTOP LAPTOP LAPTOP */
+/** LAPTOP LAPTOP LAPTOP */
+/** LAPTOP LAPTOP LAPTOP */
+/** LAPTOP LAPTOP LAPTOP */
+@media screen and (max-width: 1110px) {
+  /** PROJECT PROJECT PROJECT */
+  /** PROJECT PROJECT PROJECT */
+  /** PROJECT PROJECT PROJECT */
+  /** PROJECT PROJECT PROJECT */
+  /** PROJECT PROJECT PROJECT */
+  .project-wrapper img {
+    min-width: 200px;
+    min-height: 250px;
+  }
+}
+
+/** TABLET TABLET TABLET */
+/** TABLET TABLET TABLET */
+/** TABLET TABLET TABLET */
+/** TABLET TABLET TABLET */
+/** TABLET TABLET TABLET */
+@media screen and (max-width: 768px) {
+  /** HERO HERO HERO */
+  /** HERO HERO HERO */
+  /** HERO HERO HERO */
+  /** HERO HERO HERO */
+  /** HERO HERO HERO */
+  .title {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .user-avatar {
+    min-width: 280px;
+    margin-bottom: 20px;
+  }
+  .user-info {
+    min-width: 400px;
+  }
+  .user-info * {
+    margin-bottom: 10px;
+  }
+  .user-info h1 {
+    font-size: 30px;
+  }
+  .user-info h3 {
+    font-size: 22px;
+  }
+  .user-info p {
+    font-size: 16px;
+  }
+  .links {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .btn {
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+
+  /** PROJECT PROJECT PROJECT */
+  /** PROJECT PROJECT PROJECT */
+  /** PROJECT PROJECT PROJECT */
+  /** PROJECT PROJECT PROJECT */
+  /** PROJECT PROJECT PROJECT */
+  .project-wrapper p:nth-child(2) {
+    font-size: 16px;
+  }
+  .project-wrapper p:nth-child(3) {
+    font-size: 14px;
+  }
+
+  /** SKILLS SKILLS SKILLS */
+  /** SKILLS SKILLS SKILLS */
+  /** SKILLS SKILLS SKILLS */
+  /** SKILLS SKILLS SKILLS */
+  /** SKILLS SKILLS SKILLS */
+  .skills-context p {
+    font-size: 16px;
+  }
+  .checked-icon {
+    width: 16px;
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+  .skills-line-break {
+    width: 180px;
+  }
+
+  /** CONTACT CONTACT CONTACT */
+  /** CONTACT CONTACT CONTACT */
+  /** CONTACT CONTACT CONTACT */
+  /** CONTACT CONTACT CONTACT */
+  /** CONTACT CONTACT CONTACT */
+  .contact-container {
+    width: 90%;
+  }
+  .input:nth-child(3) {
+    font-size: 15px;
+    max-height: 500px;
+  }
+
+  .email-page {
+    width: 90%;
+    border-radius: 15px;
+    padding: 30px;
+  }
+  .name-view {
+    margin-bottom: 10px;
+  }
+  .email-view {
+    color: var(---blue-default);
+    margin-bottom: 10px;
+  }
+
+  .send {
+    margin-top: 30px;
+  }
+}
+
+/** MOBILE MOBILE MOBILE */
+/** MOBILE MOBILE MOBILE */
+/** MOBILE MOBILE MOBILE */
+/** MOBILE MOBILE MOBILE */
+/** MOBILE MOBILE MOBILE */
+@media screen and (max-width: 425px) {
+  /** HERO HERO HERO */
+  /** HERO HERO HERO */
+  /** HERO HERO HERO */
+  /** HERO HERO HERO */
+  /** HERO HERO HERO */
+  .title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .user-avatar {
+    width: 200px;
+    min-width: 200px;
+  }
+  .user-info {
+    min-width: 300px;
+  }
+  .user-info h1 {
+    font-size: 26px;
+  }
+  .user-info h3 {
+    font-size: 17px;
+  }
+  .user-info p {
+    font-size: 14px;
+  }
+
+  /** SKILLS SKILLS SKILLS */
+  /** SKILLS SKILLS SKILLS */
+  /** SKILLS SKILLS SKILLS */
+  /** SKILLS SKILLS SKILLS */
+  /** SKILLS SKILLS SKILLS */
+  .skills {
+    max-width: 300px;
+  }
+  .skills-container {
+    max-width: 250px;
+    min-height: 200px;
+  }
+  .skills-context {
+    flex-wrap: wrap;
+  }
+  .skills-context p {
+    font-size: 14px;
+  }
+  .skills-line-break {
+    width: 160px;
+  }
+
+  /** CONTACT CONTACT CONTACT */
+  /** CONTACT CONTACT CONTACT */
+  /** CONTACT CONTACT CONTACT */
+  /** CONTACT CONTACT CONTACT */
+  /** CONTACT CONTACT CONTACT */
+  .contact-container {
+    width: 90%;
+  }
+  .input:nth-child(3) {
+    min-width: 280px;
+  }
+
+  .email-page {
+    width: 90%;
+    max-height: 90vh;
+    border-radius: 7px;
+    padding: 20px;
+  }
+  .name-view {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .email-view {
+    color: var(---blue-default);
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .message-view {
+    font-size: 12px;
+  }
+
+  .send {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="page-container bg-dark text-light">
+      <div class="hero">
+        <div class="user-profile invisible">
+          <img class="user-avatar" src="./assets/user-img.jpg" alt="Avatar" />
+          <button class="mode-toggle"></button>
+          <img class="icon-sun hidden" src="./assets/icon-sun-dark.png" />
+          <img class="icon-moon" src="./assets/icon-moon-light.png" />
+        </div>
+
+        <div class="user-info invisible-reverse">
+          <h1>Fakhriddin Dean Mustafaev</h1>
+          <h3>FRONTEND DEVELOPER</h3>
+
+          <div class="links">
+            <a
+              class="github hidden"
+              target="_blank"
+              href="https://github.com/DeanMustafa"
+              ><img src="./assets/icon-github-dark.svg" alt="GitHub"
+            /></a>
+            <a
+              class="linkedin hidden"
+              target="_blank"
+              href="https://www.linkedin.com/in/fakhriddin-mustafaev-855a46225/"
+              ><img src="./assets/icon-linkedin-dark.svg" alt="LinkedIn"
+            /></a>
+            <a
+              class="github"
+              target="_blank"
+              href="https://github.com/DeanMustafa"
+              ><img src="./assets/icon-github-light.svg" alt="GitHub"
+            /></a>
+            <a
+              class="linkedin"
+              target="_blank"
+              href="https://www.linkedin.com/in/fakhriddin-mustafaev-855a46225/"
+              ><img src="./assets/icon-linkedin-light.svg" alt="LinkedIn"
+            /></a>
+          </div>
+
+          <p>
+            With a passion for developing modern websites for commercial
+            businesses.
+          </p>
+          <button class="btn btn-dark" id="resume_btn">Resume</button>
+        </div>
+      </div>
+      <div class="projects">
+        <h1 class="title invisible-fade">PROJECTS</h1>
+        <div class="projects-container">
+          <div class="project-wrapper invisible">
+            <img src="#" alt="project image" />
+            <p>Name</p>
+            <p>Description</p>
+          </div>
+          <div class="project-wrapper invisible">
+            <img src="#" alt="project image" />
+            <p>Name</p>
+            <p>Description</p>
+          </div>
+          <div class="project-wrapper invisible">
+            <img src="#" alt="project image" />
+            <p>Name</p>
+            <p>Description</p>
+          </div>
+          <div class="project-wrapper invisible">
+            <img src="#" alt="project image" />
+            <p>Name</p>
+            <p>Description</p>
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <h1 class="title invisible-fade">SKILLS</h1>
+        <div class="skills-container">
+          <div class="skills-wrapper">
+            <div class="skills-context invisible">
+              <img
+                class="checked-icon hidden"
+                src="./assets/icon-check-dark.svg"
+              />
+              <img class="checked-icon" src="./assets/icon-check-light.svg" />
+              <p>HTML</p>
+              <img
+                class="checked-icon hidden"
+                src="./assets/icon-check-dark.svg"
+              />
+              <img class="checked-icon" src="./assets/icon-check-light.svg" />
+              <p>CSS</p>
+              <img
+                class="checked-icon hidden"
+                src="./assets/icon-check-dark.svg"
+              />
+              <img class="checked-icon" src="./assets/icon-check-light.svg" />
+              <p>JavaScript</p>
+              <img
+                class="checked-icon hidden"
+                src="./assets/icon-check-dark.svg"
+              />
+              <img class="checked-icon" src="./assets/icon-check-light.svg" />
+              <p>GitHub</p>
+              <img
+                class="checked-icon hidden"
+                src="./assets/icon-studying-dark.png"
+              />
+              <img
+                class="checked-icon"
+                src="./assets/icon-studying-light.png"
+              />
+              <p>React</p>
+            </div>
+            <div
+              class="skills-line-break light-line-break invisible-fade light-clr-break-line"
+            ></div>
+          </div>
+          <div class="skills-wrapper">
+            <div class="skills-context invisible-reverse">
+              <img
+                class="checked-icon hidden"
+                src="./assets/icon-check-dark.svg"
+              />
+              <img class="checked-icon" src="./assets/icon-check-light.svg" />
+              <p>Responsive</p>
+              <img
+                class="checked-icon hidden"
+                src="./assets/icon-check-dark.svg"
+              />
+              <img class="checked-icon" src="./assets/icon-check-light.svg" />
+              <p>Bootstrap</p>
+              <img
+                class="checked-icon hidden"
+                src="./assets/icon-check-dark.svg"
+              />
+              <img class="checked-icon" src="./assets/icon-check-light.svg" />
+              <p>Problem-solving</p>
+            </div>
+            <div
+              class="skills-line-break secondary-line-break invisible-fade light-clr-break-line"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact invisible-fade" id="contact">
+        <h1 class="title">CONTACT</h1>
+        <div class="contact-container">
+          <input
+            type="text"
+            class="input input-light"
+            placeholder="Name*"
+            id="name_input"
+          />
+          <input
+            type="email"
+            class="input input-light"
+            placeholder="Email*"
+            id="email_input"
+          />
+          <textarea
+            name="message"
+            class="input input-light"
+            placeholder="Message*"
+            id="message_input"
+          ></textarea>
+        </div>
+        <button class="btn btn-dark submit">Submit</button>
+      </div>
+      <div class="submit-preview submit-dark hide-preview">
+        <div class="email-page light-email-page">
+          <h2 class="name-view"></h2>
+          <p class="email-view"></p>
+          <p class="message-view"></p>
+        </div>
+        <button class="btn btn-dark send">Send</button>
+      </div>
+    </div>
+  </body>
+</html>
