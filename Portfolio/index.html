@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="page-container bg-dark text-light">
-      <div class="hero">
+      <section class="hero">
         <div class="user-profile invisible">
           <img class="user-avatar" src="./assets/user-img.jpg" alt="Avatar" />
           <button class="mode-toggle"></button>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="user-info invisible-reverse">
-          <h1>Fakhriddin Dean Mustafaev</h1>
+          <h1>Fakhriddin Mustafaev</h1>
           <h3>FRONTEND DEVELOPER</h3>
 
           <div class="links">
@@ -50,13 +50,15 @@
           </div>
 
           <p>
-            With a passion for developing modern websites for commercial
-            businesses.
+            Aspiring
+            <span class="highlighted-text">front-end developer</span> seeking
+            job opportunities to apply my skills in creating engaging and
+            responsive user interfaces.
           </p>
           <button class="btn btn-dark" id="resume_btn">Resume</button>
         </div>
-      </div>
-      <div class="projects">
+      </section>
+      <section class="projects">
         <h1 class="title invisible-fade">PROJECTS</h1>
         <div class="projects-container">
           <div class="project-wrapper invisible">
@@ -80,45 +82,55 @@
             <p>Description</p>
           </div>
         </div>
-      </div>
-      <div class="skills">
+      </section>
+      <section class="skills">
         <h1 class="title invisible-fade">SKILLS</h1>
         <div class="skills-container">
           <div class="skills-wrapper">
             <div class="skills-context invisible">
-              <img
-                class="checked-icon hidden"
-                src="./assets/icon-check-dark.svg"
-              />
-              <img class="checked-icon" src="./assets/icon-check-light.svg" />
-              <p>HTML</p>
-              <img
-                class="checked-icon hidden"
-                src="./assets/icon-check-dark.svg"
-              />
-              <img class="checked-icon" src="./assets/icon-check-light.svg" />
-              <p>CSS</p>
-              <img
-                class="checked-icon hidden"
-                src="./assets/icon-check-dark.svg"
-              />
-              <img class="checked-icon" src="./assets/icon-check-light.svg" />
-              <p>JavaScript</p>
-              <img
-                class="checked-icon hidden"
-                src="./assets/icon-check-dark.svg"
-              />
-              <img class="checked-icon" src="./assets/icon-check-light.svg" />
-              <p>GitHub</p>
-              <img
-                class="checked-icon hidden"
-                src="./assets/icon-studying-dark.png"
-              />
-              <img
-                class="checked-icon"
-                src="./assets/icon-studying-light.png"
-              />
-              <p>React</p>
+              <div class="skills-text-wrapper">
+                <img
+                  class="checked-icon hidden"
+                  src="./assets/icon-check-dark.svg"
+                />
+                <img class="checked-icon" src="./assets/icon-check-light.svg" />
+                <p>HTML</p>
+              </div>
+              <div class="skills-text-wrapper">
+                <img
+                  class="checked-icon hidden"
+                  src="./assets/icon-check-dark.svg"
+                />
+                <img class="checked-icon" src="./assets/icon-check-light.svg" />
+                <p>CSS</p>
+              </div>
+              <div class="skills-text-wrapper">
+                <img
+                  class="checked-icon hidden"
+                  src="./assets/icon-check-dark.svg"
+                />
+                <img class="checked-icon" src="./assets/icon-check-light.svg" />
+                <p>JavaScript</p>
+              </div>
+              <div class="skills-text-wrapper">
+                <img
+                  class="checked-icon hidden"
+                  src="./assets/icon-check-dark.svg"
+                />
+                <img class="checked-icon" src="./assets/icon-check-light.svg" />
+                <p>GitHub</p>
+              </div>
+              <div class="skills-text-wrapper">
+                <img
+                  class="checked-icon hidden"
+                  src="./assets/icon-studying-dark.png"
+                />
+                <img
+                  class="checked-icon"
+                  src="./assets/icon-studying-light.png"
+                />
+                <p>React</p>
+              </div>
             </div>
             <div
               class="skills-line-break light-line-break invisible-fade light-clr-break-line"
@@ -126,32 +138,39 @@
           </div>
           <div class="skills-wrapper">
             <div class="skills-context invisible-reverse">
-              <img
-                class="checked-icon hidden"
-                src="./assets/icon-check-dark.svg"
-              />
-              <img class="checked-icon" src="./assets/icon-check-light.svg" />
-              <p>Responsive</p>
-              <img
-                class="checked-icon hidden"
-                src="./assets/icon-check-dark.svg"
-              />
-              <img class="checked-icon" src="./assets/icon-check-light.svg" />
-              <p>Bootstrap</p>
-              <img
-                class="checked-icon hidden"
-                src="./assets/icon-check-dark.svg"
-              />
-              <img class="checked-icon" src="./assets/icon-check-light.svg" />
-              <p>Problem-solving</p>
+              <div class="skills-text-wrapper">
+                <img
+                  class="checked-icon hidden"
+                  src="./assets/icon-check-dark.svg"
+                />
+                <img class="checked-icon" src="./assets/icon-check-light.svg" />
+                <p>Responsive</p>
+              </div>
+              <div class="skills-text-wrapper">
+                <img
+                  class="checked-icon hidden"
+                  src="./assets/icon-check-dark.svg"
+                />
+
+                <img class="checked-icon" src="./assets/icon-check-light.svg" />
+                <p>Bootstrap</p>
+              </div>
+              <div class="skills-text-wrapper">
+                <img
+                  class="checked-icon hidden"
+                  src="./assets/icon-check-dark.svg"
+                />
+                <img class="checked-icon" src="./assets/icon-check-light.svg" />
+                <p>Problem-solving</p>
+              </div>
             </div>
             <div
               class="skills-line-break secondary-line-break invisible-fade light-clr-break-line"
             ></div>
           </div>
         </div>
-      </div>
-      <div class="contact invisible-fade" id="contact">
+      </section>
+      <section class="contact invisible-fade" id="contact">
         <h1 class="title">CONTACT</h1>
         <div class="contact-container">
           <input
@@ -174,15 +193,15 @@
           ></textarea>
         </div>
         <button class="btn btn-dark submit">Submit</button>
-      </div>
-      <div class="submit-preview submit-dark hide-preview">
+      </section>
+      <section class="submit-preview submit-dark hide-preview">
         <div class="email-page light-email-page">
           <h2 class="name-view"></h2>
           <p class="email-view"></p>
           <p class="message-view"></p>
         </div>
         <button class="btn btn-dark send">Send</button>
-      </div>
+      </section>
     </div>
   </body>
 </html>

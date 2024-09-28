@@ -12,9 +12,29 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
+.page-container {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.hero {
+  scroll-snap-align: start;
+}
+.projects {
+  scroll-snap-align: start;
+}
+.skills {
+  scroll-snap-align: start;
+}
+.contact {
+  scroll-snap-align: start;
+}
+
 .page-container {
   overflow-x: hidden;
   width: 100%;
@@ -68,7 +88,7 @@ html {
   transform: translateX(-100%);
   transition: all 1s;
 }
-.invisible-fade{
+.invisible-fade {
   opacity: 0;
   filter: blur(15px);
   transition: all 1.5s;
@@ -226,14 +246,21 @@ h3 {
   text-transform: uppercase;
 }
 .user-info h1 {
-  font-size: 40px;
+  font-size: 65px;
   font-weight: 800;
+  line-height: 64px;
 }
 .user-info h3 {
   font-size: 28px;
+  font-weight: 600;
+  margin-top: 30px;
 }
 .user-info p {
-  font-size: 20px;
+  font-size: 18px;
+}
+.highlighted-text {
+  color: var(---blue-default);
+  font-weight: 700;
 }
 
 .links {
@@ -241,11 +268,11 @@ h3 {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-
-  cursor: pointer;
 }
 .links * {
   width: 35px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 .links *:hover {
   opacity: 0.7;
@@ -284,10 +311,9 @@ h3 {
 /** PROJECT PROJECT PROJECT */
 /** PROJECT PROJECT PROJECT */
 /** PROJECT PROJECT PROJECT */
-
 .projects {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1200px;
   min-height: 100vh;
 
   display: flex;
@@ -302,7 +328,7 @@ h3 {
   gap: 20px;
   display: flex;
   justify-content: center;
-  padding: 25px;
+  padding: 0 25px;
   flex-wrap: wrap;
 }
 .project-wrapper {
@@ -335,11 +361,10 @@ h3 {
 /** SKILLS SKILLS SKILLS */
 /** SKILLS SKILLS SKILLS */
 /** SKILLS SKILLS SKILLS */
-
 .skills {
   width: 100%;
-  max-width: 1600px;
-  min-height: 70vh;
+  max-width: 1200px;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
@@ -362,9 +387,13 @@ h3 {
 
 .skills-context {
   display: flex;
+}
+
+.skills-text-wrapper {
+  display: flex;
   margin-bottom: 20px;
 }
-.skills-context p {
+.skills-text-wrapper p {
   font-size: 20px;
   font-weight: 500;
 }
@@ -375,11 +404,10 @@ h3 {
 }
 
 .skills-line-break {
-  width: 250px;
+  width: 280px;
   margin-bottom: 20px;
 }
 .skills-line-break.secondary-line-break {
-  width: 280px;
   margin-bottom: 20px;
   opacity: 0.3;
 }
@@ -389,10 +417,9 @@ h3 {
 /** CONTACT CONTACT CONTACT */
 /** CONTACT CONTACT CONTACT */
 /** CONTACT CONTACT CONTACT */
-
 .contact {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   min-height: 100vh;
 
   display: flex;
@@ -404,7 +431,10 @@ h3 {
 }
 
 .contact-container {
+  width: 100%;
   max-width: 800px;
+  display: flex;
+  flex-direction: column;
 }
 
 .input {
@@ -472,7 +502,7 @@ h3 {
 /** LAPTOP LAPTOP LAPTOP */
 /** LAPTOP LAPTOP LAPTOP */
 /** LAPTOP LAPTOP LAPTOP */
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1200px) {
   /** PROJECT PROJECT PROJECT */
   /** PROJECT PROJECT PROJECT */
   /** PROJECT PROJECT PROJECT */
@@ -482,6 +512,10 @@ h3 {
     min-width: 200px;
     min-height: 250px;
   }
+  .user-info h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
 }
 
 /** TABLET TABLET TABLET */
@@ -489,7 +523,7 @@ h3 {
 /** TABLET TABLET TABLET */
 /** TABLET TABLET TABLET */
 /** TABLET TABLET TABLET */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   /** HERO HERO HERO */
   /** HERO HERO HERO */
   /** HERO HERO HERO */
@@ -513,23 +547,25 @@ h3 {
     min-width: 400px;
   }
   .user-info * {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .user-info h1 {
-    font-size: 30px;
+    font-size: 35px;
+    line-height: 35px;
   }
   .user-info h3 {
     font-size: 22px;
+    margin-top: 20px;
   }
   .user-info p {
     font-size: 16px;
   }
   .links {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 0px;
   }
   .btn {
-    padding: 10px 18px;
+    padding: 15px 20px;
     font-size: 16px;
   }
 
@@ -550,7 +586,7 @@ h3 {
   /** SKILLS SKILLS SKILLS */
   /** SKILLS SKILLS SKILLS */
   /** SKILLS SKILLS SKILLS */
-  .skills-context p {
+  .skills-text-wrapper p {
     font-size: 16px;
   }
   .checked-icon {
@@ -559,7 +595,7 @@ h3 {
     margin-right: 5px;
   }
   .skills-line-break {
-    width: 180px;
+    width: 200px;
   }
 
   /** CONTACT CONTACT CONTACT */
@@ -598,7 +634,7 @@ h3 {
 /** MOBILE MOBILE MOBILE */
 /** MOBILE MOBILE MOBILE */
 /** MOBILE MOBILE MOBILE */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 460px) {
   /** HERO HERO HERO */
   /** HERO HERO HERO */
   /** HERO HERO HERO */
@@ -606,7 +642,7 @@ h3 {
   /** HERO HERO HERO */
   .title {
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   .user-avatar {
     width: 200px;
@@ -617,12 +653,22 @@ h3 {
   }
   .user-info h1 {
     font-size: 26px;
+    line-height: 25px;
   }
   .user-info h3 {
     font-size: 17px;
   }
   .user-info p {
     font-size: 14px;
+  }
+
+  /** PROJECTS PROJECTS PROJECTS */
+  /** PROJECTS PROJECTS PROJECTS */
+  /** PROJECTS PROJECTS PROJECTS */
+  /** PROJECTS PROJECTS PROJECTS */
+  /** PROJECTS PROJECTS PROJECTS */
+  .projects .title {
+    margin-top: 20px;
   }
 
   /** SKILLS SKILLS SKILLS */
@@ -634,17 +680,17 @@ h3 {
     max-width: 300px;
   }
   .skills-container {
-    max-width: 250px;
-    min-height: 200px;
+    min-height: unset;
+    max-width: unset;
+
+    width: 100%;
   }
   .skills-context {
     flex-wrap: wrap;
+    justify-content: center;
   }
-  .skills-context p {
+  .skills-text-wrapper p {
     font-size: 14px;
-  }
-  .skills-line-break {
-    width: 160px;
   }
 
   /** CONTACT CONTACT CONTACT */
