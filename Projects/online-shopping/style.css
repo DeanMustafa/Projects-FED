@@ -34,6 +34,9 @@ body {
 .hidden {
   display: none !important;
 }
+.overflow {
+  overflow: hidden;
+}
 
 /* MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE */
 /* MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE */
@@ -50,6 +53,7 @@ body {
   gap: 1%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .items-container {
@@ -226,6 +230,29 @@ body {
   font-weight: 600;
 }
 
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cart-item button{
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  outline: none;
+  border: 1px solid var(---Rose-900);
+  border-radius: 50%;
+  padding-top: 1px;
+  background-color: transparent;
+}
+.cart-item button:hover{
+  font-weight: 600;
+}
+
 .cart-item-name {
   font-size: 16px;
   font-weight: 700;
@@ -242,7 +269,17 @@ body {
   font-size: 15px;
   font-weight: 700;
   color: var(---Red);
-  margin-bottom: 20px;
+  
+}
+
+.total-price-wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.total-price{
+  color: var(---Red);
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .purchase {
@@ -267,6 +304,78 @@ body {
   background-color: #691c05;
 }
 
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+.confirm-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm-page-bg {
+  background-color: rgba(100, 100, 99, 0.5);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.confirm-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 25px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 10px;
+  background-color: var(---Rose-50);
+}
+
+.confirm-wrapper h2 {
+  color: var(---Rose-900);
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.confirm-wrapper p {
+  color: var(---Rose-500);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.confirm-wrapper button {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  color: var(---Rose-50);
+  padding: 15px;
+  background-color: var(---Red);
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+.confirm-wrapper button:hover {
+  background-color: #691c05;
+}
+.confirm-wrapper button:active {
+  background-color: var(---Red);
+}
+
+.confirm-cart{
+  background-color: var(---Rose-100);
+}
 
 /* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
 /* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
@@ -275,20 +384,20 @@ body {
 /* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
 /* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
 @media screen and (max-width: 1095px) {
-  .items-container{
+  .items-container {
     margin-left: 5%;
   }
-  .cart-container{
+  .cart-container {
     margin-right: 5%;
   }
 }
 
-@media screen and (max-width: 915px) {  
+@media screen and (max-width: 915px) {
   .main-container {
     gap: 30px;
     flex-direction: column;
     align-items: center;
-  }  
+  }
   .items-container {
     width: 100%;
     display: flex;
@@ -297,7 +406,7 @@ body {
     justify-content: center;
     margin-left: 0%;
     gap: 0%;
-  }  
+  }
   .items-wrapper {
     width: unset;
     display: flex;
@@ -306,13 +415,22 @@ body {
     gap: 2%;
     flex-wrap: wrap;
   }
-  
 
   .cart-container {
     width: 80%;
     min-width: 250px;
-    max-width: 500px;    
+    max-width: 500px;
     margin-right: 0%;
     margin-bottom: 30px;
+  }
+
+  .confirm-wrapper {
+    width: 90%;
+  }
+  .confirm-wrapper h2 {
+    font-size: 25px;
+  }
+  .confirm-wrapper p {
+    font-size: 12px;
   }
 }

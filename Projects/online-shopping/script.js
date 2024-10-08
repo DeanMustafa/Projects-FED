@@ -1,4 +1,3 @@
-// script.js
 
 const itemCountObj = {
     1: { count: 0, name: "Waffle with Berries", price: 6.50 },
@@ -19,6 +18,7 @@ function updateCartCount() {
 
 function updateCartVisibility() {
 	const purchaseBtn = document.querySelector('.purchase')
+    const totalPrice = document.querySelector('.total-price')
     const cartEmpty = document.querySelector('.cart-empty');
     const cartItemTemplate = document.querySelector('.cart-item-template');
     const totalCount = Object.values(itemCountObj).reduce((sum, item) => sum + item.count, 0);
@@ -27,7 +27,9 @@ function updateCartVisibility() {
         cartEmpty.classList.remove('hidden');
         cartItemTemplate.innerHTML = '';
 		purchaseBtn.classList.remove('active-purchase')
+        totalPrice.classList.add('hidden')
     } else {
+        totalPrice.classList.remove('hidden')
 		purchaseBtn.classList.add('active-purchase')
 		cartEmpty.classList.add('hidden');
         updateCartItems();
@@ -36,20 +38,60 @@ function updateCartVisibility() {
 
 function updateCartItems() {
     const cartItemTemplate = document.querySelector('.cart-item-template');
+    const confirmOrderTemplate = document.querySelector('.confirm-cart');
     cartItemTemplate.innerHTML = '';
+    confirmOrderTemplate.innerHTML = '';
+
 
     for (const [id, item] of Object.entries(itemCountObj)) {
         if (item.count > 0) {
             const itemElement = document.createElement('div');
+            
             itemElement.classList.add('cart-item');
+            itemElement.setAttribute('data-id', id);
             itemElement.innerHTML = `
-                <p class="cart-item-name">${item.name}</p>
-                <p class="cart-each-item-count">Quantity: ${item.count}</p>
-                <p class="cart-each-item-price">Price: $${(item.price * item.count).toFixed(2)}</p>
+                <div class="cart-item-info-wrapper">
+                    <p class="cart-item-name">${item.name}</p>
+                    <p class="cart-each-item-count">Quantity: ${item.count}</p>
+                    <p class="cart-each-item-price">Price: $${(item.price * item.count).toFixed(2)}</p>
+                </div>
+                <button class="remove-solo-item" data-id="${id}">X</button>
             `;
             cartItemTemplate.appendChild(itemElement);
         }
     }
+
+    getTotalPrice();
+
+    function getTotalPrice() {
+        const addedItemPrices = document.querySelectorAll('.cart-each-item-price');
+        const totalPrice = document.querySelector('.total-price');
+        let total = 0;
+    
+        addedItemPrices.forEach((singleItemPrice) => {
+            const priceText = singleItemPrice.textContent.replace('Price: $', '');
+            total += parseFloat(priceText);
+        });
+    
+        totalPrice.textContent = `Total: $${total.toFixed(2)}`;
+    }
+}
+
+function confirmOrderPurchase() {
+    const startNewOrder = document.querySelector(".start-new-order");
+    const orderConfirmBg = document.querySelector('.confirm-page-bg');
+    const body = document.querySelector('body');
+    const confirmOrderPage = document.querySelector('.confirm-container')
+
+    
+    startNewOrder.addEventListener('click', () => {
+        body.classList.remove('overflow')
+        confirmOrderPage.classList.add('hidden')
+    })
+    orderConfirmBg.addEventListener('click', () => {
+        body.classList.remove('overflow')
+        confirmOrderPage.classList.add('hidden')
+    })
 }
 
 function setupItemManager() {
@@ -67,9 +109,18 @@ function setupItemManager() {
             id = item.querySelector('.js_add_btn').getAttribute('data-id');
         } else if (target.closest('.active-purchase')) {
             actionType = 'purchase';
+        } else if (target.closest('.remove-solo-item')) {
+            actionType = 'remove';
+            id = target.closest('.remove-solo-item').getAttribute('data-id');
         }
 
-        if (actionType === 'purchase') {
+        if (actionType === 'remove') {
+            removeFromCart(id);
+        } else if (actionType === 'purchase') {
+            const body = document.querySelector('body');
+            const orderConfirmPage = document.querySelector('.confirm-container')
+            body.classList.add('overflow')
+            orderConfirmPage.classList.remove('hidden')
             // Reset all item counts to 0
             for (const id in itemCountObj) {
                 itemCountObj[id].count = 0;
@@ -117,52 +168,30 @@ function setupItemManager() {
     });
 }
 
+function removeFromCart(itemId) {
+    // Reset the item count in itemCountObj
+    itemCountObj[itemId].count = 0;
+
+    // Update the UI for the specific item
+    const item = document.querySelector(`.item[data-id="${itemId}"]`);
+    if (item) {
+        const addToCartElement = item.querySelector('.js_add_btn');
+        const addToCartSelectionElement = item.querySelector('.js_add_btn_active');
+        const countElement = item.querySelector('.count');
+        
+        addToCartElement.style.display = 'flex';
+        addToCartSelectionElement.style.display = 'none';
+        countElement.textContent = '0';
+    }
+
+    // Update cart
+    updateCartCount();
+    updateCartVisibility();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     setupItemManager();
     updateCartVisibility();
+    confirmOrderPurchase();
+    removeFromCart();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { appearOnActive } from "../module/uiManager.js";
-
-// // global variable
-// const addBtns = document.querySelectorAll(".js_add_btn");
-
-// // #######################################################################
-// //                          Add itens to cart
-// // #######################################################################
-
-// addBtns.forEach((btn) => {
-// 	btn.addEventListener("click", (e) => {
-// 		let button = e.currentTarget;
-// 		// Upon click active class will be added and thing changes VTF
-// 		appearOnActive(button);
-// 	});
-// });
-
