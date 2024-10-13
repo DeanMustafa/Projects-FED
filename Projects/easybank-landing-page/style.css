@@ -236,7 +236,7 @@ header li{
     color: var(---Dark-Blue);
 }
 .top-left-wrapper p{
-    font-size: 19px;
+    font-size: 18px;
     line-height: 28px;
     margin-bottom: 30px;
     color: var(---Grayish-Blue);
@@ -374,7 +374,7 @@ header li{
     color: var(---Grayish-Blue);
 }
 .article-context h3{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     color: var(---Dark-Blue);
     margin: 15px 0;
@@ -385,7 +385,7 @@ header li{
     color: var(---Lime-Green);
 }
 .article-context p{
-    font-size: 18px;
+    font-size: 15px;
     color: var(---Grayish-Blue);
     line-height: 25px;
 }
@@ -411,6 +411,7 @@ footer{
 }
 .footer-logo{
     margin-bottom: 60px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(211deg) brightness(104%) contrast(102%);
 }
 
 .social-accounts{
@@ -419,6 +420,10 @@ footer{
 }
 .social-acc{
     cursor: pointer;
+    transition: filter .2s;
+}
+.social-acc:hover{
+    filter: invert(60%) sepia(100%) saturate(524%) hue-rotate(82deg) brightness(100%) contrast(100%);
 }
 
 .footer-nav-left{
