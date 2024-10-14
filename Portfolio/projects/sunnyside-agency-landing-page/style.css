@@ -43,7 +43,87 @@ a{
     width: 100%;
 }
 
+/*                     HEADER HEADER                   */
+/*                     HEADER HEADER                   */
+/*                     HEADER HEADER                   */
+/*                     HEADER HEADER                   */
+/*                     HEADER HEADER                   */
+header{
+    width: 90%;
+    min-height: 80px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+}
+.logo img{
+    width: 120px;
+}
+.hamburger{
+    width: 30px;
+    height: 25px;
+    background-image: url('./assets/icon-hamburger.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
 
+/* .header-nav{
+    display: flex;
+    gap: 20px;
+} */
+
+.nav-link{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(---White);
+}
+.nav-link a{
+    font-family: 'Barlow', Arial, Helvetica, sans-serif;
+    color: var(---Very-dark-grayish-blue);
+    font-weight: 600;
+    font-size: 20px;
+    transition: color .3s;
+}
+.nav-link a:hover{
+    color: var(---Yellow);
+}
+
+.contact-btn{
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    width: 150px;
+    height: 60px;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: 'Fraunces', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: all .3s;
+    background-color: var(---Yellow);
+}
+.contact-btn:hover{
+    opacity: .7;
+}
+
+/*                     HERO HERO HEOR                   */
+/*                     HERO HERO HEOR                   */
+/*                     HERO HERO HEOR                   */
+/*                     HERO HERO HEOR                   */
+/*                     HERO HERO HEOR                   */
 .hero{
     display: flex;
     align-items: center;
@@ -308,6 +388,12 @@ footer a:hover{
         margin: 0 auto;
         background-color: var(---White);
     }
+    
+    /*                     HERO HERO HERO                   */
+    /*                     HERO HERO HERO                   */
+    /*                     HERO HERO HERO                   */
+    /*                     HERO HERO HERO                   */
+    /*                     HERO HERO HERO                   */
     .hero{
         min-height: 80vh;
         background-image: url('./assets/desktop/image-hero.jpg');
@@ -528,5 +614,68 @@ footer a:hover{
     }
     .footer-social *:hover{
         scale: 1.5;
+    }
+}
+
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+/*                            DESKTOP                           */
+@media screen and (min-width: 768px){
+    /*                     HEADER HEADER                   */
+    /*                     HEADER HEADER                   */
+    /*                     HEADER HEADER                   */
+    /*                     HEADER HEADER                   */
+    /*                     HEADER HEADER                   */
+    .logo img{
+        width: 130px;
+    }
+    .hamburger{
+        display: none;
+    }
+
+    .nav-link{
+        width: 100%;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-direction: row;
+        padding: 0;
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        background-color: unset;
+    }
+    .nav-link a{
+        color: var(---White);
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .contact-btn{
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        width: 130px;
+        height: 50px;
+        font-weight: 800;
+        font-size: 15px;
+        background-color: var(---White);
+    }
+    .contact-btn:hover{
+        opacity: 1;
+        background-color: var(---Yellow);
+    }
+}
+@media screen and (min-width: 1200px){
+    .hero{
+        min-height: 90vh;
     }
 }
