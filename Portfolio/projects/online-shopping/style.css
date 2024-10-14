@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+:root {
+  ---Red: #c73a0f;
+  ---Green: #1ea475;
+
+  ---Rose-50: #fcf9f7;
+  ---Rose-100: #f4edeb;
+  ---Rose-300: #c9aea6;
+  ---Rose-400: #ad8985;
+  ---Rose-500: #87635a;
+  ---Rose-900: #260f08;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Red Hat Text", Arial, Helvetica, sans-serif;
+  background-color: var(---Rose-100);
+}
+
+/* JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+/* JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+/* JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+/* JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+/* JAVASCRIPT CODES JAVASCRIPT CODES JAVASCRIPT CODES */
+.show {
+  z-index: 3;
+}
+.hidden {
+  display: none !important;
+}
+.overflow {
+  overflow: hidden;
+}
+
+/* MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE */
+/* MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE */
+/* MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE */
+/* MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE */
+/* MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE MAIN CODE */
+.main-container {
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding-top: 3%;
+  margin: 0 auto;
+
+  gap: 1%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.items-container {
+  width: 800px;
+}
+.title {
+  font-size: 30px;
+  color: var(---Rose-900);
+  margin-bottom: 20px;
+}
+
+.items-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.item-image {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.img1 {
+  background-image: url("./assets/image-waffle-desktop.jpg");
+}
+.img2 {
+  background-image: url("./assets/image-creme-brulee-desktop.jpg");
+}
+.img3 {
+  background-image: url("./assets/image-macaron-desktop.jpg");
+}
+.img4 {
+  background-image: url("./assets/image-tiramisu-desktop.jpg");
+}
+.img5 {
+  background-image: url("./assets/image-baklava-desktop.jpg");
+}
+.img6 {
+  background-image: url("./assets/image-meringue-desktop.jpg");
+}
+.img7 {
+  background-image: url("./assets/image-cake-desktop.jpg");
+}
+.img8 {
+  background-image: url("./assets/image-brownie-desktop.jpg");
+}
+.img9 {
+  background-image: url("./assets/image-panna-cotta-desktop.jpg");
+}
+
+.item-image .add-to-cart {
+  width: 150px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  cursor: pointer;
+  border-radius: 25px;
+  transform: translateX(-50%);
+  border: 1px solid var(---Red);
+  background-color: var(---Rose-50);
+  z-index: 2;
+}
+.item-image .add-to-cart p {
+  font-weight: 600;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.item-image .add-to-cart-selection {
+  width: 150px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(---Red);
+  border-radius: 25px;
+  border: 1px solid var(---Red);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.item-image .add-to-cart-selection span {
+  font-weight: 400;
+  text-align: center;
+  margin: 10px 0px;
+  width: 25px;
+  color: var(---Rose-50);
+}
+.item-image .add-to-cart-selection button {
+  outline: none;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(---Rose-50);
+  position: relative;
+}
+.minus-icon {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.plus-icon {
+  position: absolute;
+  top: 20%;
+  left: 18%;
+}
+
+.item-context-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.item-category {
+  color: var(---Rose-500);
+  font-weight: 500;
+  font-size: 13px;
+}
+.item-name {
+  color: var(---Rose-900);
+  font-weight: 700;
+  font-size: 15px;
+}
+.item-price {
+  color: var(---Red);
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.cart-container {
+  width: 90%;
+  max-width: 300px;
+  min-width: 250px;
+  height: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(---Rose-50);
+  display: flex;
+  flex-direction: column;
+}
+.cart-title {
+  color: var(---Red);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.cart-empty-img {
+  width: 100%;
+  height: 150px;
+  justify-content: center;
+  background-image: url("./assets/illustration-empty-cart.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cart-empty p {
+  color: var(---Rose-500);
+  font-weight: 600;
+}
+
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cart-item button{
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  outline: none;
+  border: 1px solid var(---Rose-900);
+  border-radius: 50%;
+  padding-top: 1px;
+  background-color: transparent;
+}
+.cart-item button:hover{
+  font-weight: 600;
+}
+
+.cart-item-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(---Rose-900);
+  margin-bottom: 5px;
+}
+.cart-each-item-count {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(---Rose-500);
+  margin-bottom: 5px;
+}
+.cart-each-item-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(---Red);
+  
+}
+
+.total-price-wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.total-price{
+  color: var(---Red);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.purchase {
+  border: none;
+  outline: none;
+  color: var(---Rose-50);
+  background-color: var(---Rose-300);
+  font-size: 15px;
+  font-weight: 600;
+
+  margin-top: 20px;
+  padding: 10px 0;
+  border-radius: 20px;
+  cursor: not-allowed;
+}
+.active-purchase {
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: var(---Red);
+}
+.active-purchase:hover {
+  background-color: #691c05;
+}
+
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+/* CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER CONFIRM ORDER */
+.confirm-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm-page-bg {
+  background-color: rgba(100, 100, 99, 0.5);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.confirm-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 25px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 10px;
+  background-color: var(---Rose-50);
+}
+
+.confirm-wrapper h2 {
+  color: var(---Rose-900);
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.confirm-wrapper p {
+  color: var(---Rose-500);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.confirm-wrapper button {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  color: var(---Rose-50);
+  padding: 15px;
+  background-color: var(---Red);
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+.confirm-wrapper button:hover {
+  background-color: #691c05;
+}
+.confirm-wrapper button:active {
+  background-color: var(---Red);
+}
+
+.confirm-cart{
+  background-color: var(---Rose-100);
+}
+
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+/* RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE */
+@media screen and (max-width: 1095px) {
+  .items-container {
+    margin-left: 5%;
+  }
+  .cart-container {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .main-container {
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .items-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0%;
+    gap: 0%;
+  }
+  .items-wrapper {
+    width: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    flex-wrap: wrap;
+  }
+
+  .cart-container {
+    width: 80%;
+    min-width: 250px;
+    max-width: 500px;
+    margin-right: 0%;
+    margin-bottom: 30px;
+  }
+
+  .confirm-wrapper {
+    width: 90%;
+  }
+  .confirm-wrapper h2 {
+    font-size: 25px;
+  }
+  .confirm-wrapper p {
+    font-size: 12px;
+  }
+}
