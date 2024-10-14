@@ -126,18 +126,28 @@ messageInput.addEventListener("input", (e) => {
 //*SUBMIT PREVIEW
 const sendButton = document.querySelector(".send");
 const submitButton = document.querySelector(".submit");
+const warningMessage = document.querySelector('.warning-msg')
 
 submitButton.addEventListener("click", () => {
   console.log("SUBMIT CLICK");
 
-  emailPreview.classList.toggle("hide-preview");
-  emailPreview.classList.toggle("show-preview");
+  if(nameInput.value === "" || emailInput.value === "" || messageInput.value === ""){
+    console.log('has no input');
+    warningMessage.classList.remove('hidden');
+  } else {
+    console.log('has input');
+    warningMessage.classList.add('hidden');
+    emailPreview.classList.toggle("hide-preview");
+    emailPreview.classList.toggle("show-preview");
+  }
 });
 sendButton.addEventListener("click", () => {
   console.log("SEND CLICK");
 
   emailPreview.classList.toggle("show-preview");
   emailPreview.classList.toggle("hide-preview");
+  SendEmail();
+  // location.reload();
 });
 
 //*SMOOTH SCROLLING
@@ -176,3 +186,24 @@ const hiddenElementsFade = document.querySelectorAll(".invisible-fade");
 hiddenElements.forEach((el) => observer.observe(el));
 hiddenElementsReverse.forEach((el) => observer.observe(el));
 hiddenElementsFade.forEach((el) => observer.observe(el));
+
+//          Email JS
+//          Email JS
+//          Email JS
+//          Email JS
+//          Email JS
+function SendEmail() {
+  var params = {
+    name_input : document.querySelector("#name_input").value,
+    email_input : document.querySelector("#email_input").value,
+    message_input : document.querySelector("#message_input").value
+  }
+
+  emailjs.send("service_oljn48a", "template_yth79lb", params).then(function (res) {
+    alert("Email has been sent successfully! " + res.status);
+  })
+
+  setTimeout(function() {
+      window.location.reload();
+    }, 3000);
+}

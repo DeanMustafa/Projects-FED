@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PORTFOLIO</title>
 
+    <!--     EmailJS SETUP     -->
+    <!--     EmailJS SETUP     -->
+    <script
+      type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function() {
+          emailjs.init({publicKey: "HUbS_osSYpV5rW042",});
+      })();
+  </script>
+
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
   </head>
@@ -72,7 +83,7 @@
               Showcases my skills in manipulating the DOM, handling events, and updating the UI in real-time to deliver a smooth user experience.
             </p>
             <div class="project-live-code">
-              <a href="./projects/online-shopping/index.html" target="_blank">Live</a>
+              <a href="./projects/online-shopping/index.html" target="_blank">Demo</a>
               <a href="https://github.com/DeanMustafa/Projects-FED/tree/main/Portfolio/projects/online-shopping" target="_blank">Code</a>
             </div>
           </div>
@@ -83,7 +94,7 @@
               Responsive landing page to showcase my CSS skills in design handling and creating adaptive websites across all devices.
             </p>
             <div class="project-live-code">
-              <a href="./projects/easybank-landing-page/index.html" target="_blank">Live</a>
+              <a href="./projects/easybank-landing-page/index.html" target="_blank">Demo</a>
               <a href="https://github.com/DeanMustafa/Projects-FED/tree/main/Portfolio/projects/easybank-landing-page" target="_blank">Code</a>
             </div>
           </div>
@@ -94,7 +105,7 @@
               Responsive landing page to showcase my CSS skills in design handling and creating adaptive websites across all devices.
             </p>
             <div class="project-live-code">
-              <a href="./projects/sunnyside-agency-landing-page/index.html" target="_blank">Live</a>
+              <a href="./projects/sunnyside-agency-landing-page/index.html" target="_blank">Demo</a>
               <a href="https://github.com/DeanMustafa/Projects-FED/tree/main/Portfolio/projects/sunnyside-agency-landing-page" target="_blank">Code</a>
             </div>
           </div>
@@ -199,21 +210,25 @@
             class="input input-light"
             placeholder="Name*"
             id="name_input"
+            required
           />
           <input
             type="email"
             class="input input-light"
             placeholder="Email*"
             id="email_input"
+            required
           />
           <textarea
             name="message"
             class="input input-light"
             placeholder="Message*"
             id="message_input"
+            required
           ></textarea>
         </div>
-        <button class="btn btn-dark submit">Submit</button>
+        <p class="warning-msg hidden">Please fill out all required fields marked with *.</p>
+        <button class="btn btn-dark submit">Preview</button>
       </section>
 
       
