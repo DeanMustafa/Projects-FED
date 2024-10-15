@@ -50,6 +50,7 @@ a{
 /*                     HEADER HEADER                   */
 header{
     width: 90%;
+    max-width: 1550px;
     min-height: 80px;
     position: absolute;
     top: 0;

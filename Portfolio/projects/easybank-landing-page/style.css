@@ -399,7 +399,7 @@ footer{
     background-color: var(---Dark-Blue);
 }
 .footer-bg-wrapper{
-    width: 100%;
+    width: 80%;
     max-width: 1600px;
     margin: 0 auto;
     display: flex;
@@ -591,7 +591,7 @@ footer li{
     }
     .phone-img{
         top: unset;
-        bottom: 0;
+        bottom: -40px;
         left: 50%;
         transform: translate(-50%);
         width: 100%;
@@ -814,6 +814,7 @@ footer li{
     }
     .phone-img{
         min-height: 40vh;
+        bottom: -25px;
     }
 
     /**                          MID WRAPPER                          */

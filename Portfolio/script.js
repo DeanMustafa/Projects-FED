@@ -125,6 +125,7 @@ messageInput.addEventListener("input", (e) => {
 //*SUBMIT PREVIEW
 //*SUBMIT PREVIEW
 const sendButton = document.querySelector(".send");
+const backButton = document.querySelector(".back");
 const submitButton = document.querySelector(".submit");
 const warningMessage = document.querySelector('.warning-msg')
 
@@ -147,7 +148,12 @@ sendButton.addEventListener("click", () => {
   emailPreview.classList.toggle("show-preview");
   emailPreview.classList.toggle("hide-preview");
   SendEmail();
-  // location.reload();
+});
+backButton.addEventListener("click", () => {
+  console.log("BACK CLICK");
+
+  emailPreview.classList.toggle("show-preview");
+  emailPreview.classList.toggle("hide-preview");
 });
 
 //*SMOOTH SCROLLING

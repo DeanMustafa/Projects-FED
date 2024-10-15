@@ -34,3 +34,14 @@ if (mediaQuery.matches) {
         })
     })
 }
+
+// Checks if the screen size, depending on that either shows or hides the headerNav
+function mediaQueryCheck() {
+    if (mediaQuery.matches) {
+        headerNav.style.display = "none";
+    } else {
+        headerNav.style.display = "flex";
+    }
+}
+// Calling the function on load/reload
+mediaQueryCheck();
