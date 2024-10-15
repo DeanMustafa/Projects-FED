@@ -205,8 +205,8 @@ function SendEmail() {
     message_input : document.querySelector("#message_input").value
   }
 
-  emailjs.send("service_oljn48a", "template_yth79lb", params).then(function (res) {
-    alert("Email has been sent successfully! " + res.status);
+  emailjs.send("service_oljn48a", "template_yth79lb", params).then(function () {
+    alert("Email has been sent successfully!");
   })
 
   setTimeout(function() {
