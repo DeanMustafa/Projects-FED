@@ -108,6 +108,10 @@ body {
   transition-delay: 600ms;
 }
 
+.skills-text{
+  color: var(---blue-light);
+}
+
 .show-preview {
   opacity: 1;
   transform: translateX(0vh);
